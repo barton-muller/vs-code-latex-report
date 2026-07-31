@@ -7,4 +7,5 @@ report.markdown.in
 report.fls
 .DS_Store
 report.synctex(busy)
-.vscode/
+.vscode/ltex.disabledRules.*.txt
+.vscode/ltex.hiddenFalsePositives.*.txt
