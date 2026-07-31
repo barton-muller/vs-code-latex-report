@@ -1,0 +1,7 @@
+[
+	{
+		"key": "alt+s",
+		"command": "latex-workshop.synctex",
+		"when": "editorTextFocus && !config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /^latex$|^latex-expl3$|^doctex$/"
+	}
+]

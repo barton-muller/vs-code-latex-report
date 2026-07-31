@@ -12,6 +12,8 @@ Open `report.code-workspace`. It configures:
 
 `.vscode/extensions.json` recommends the two extensions above (`James-Yu.latex-workshop`, `valentjn.vscode-ltex`), so VS Code will prompt to install them the first time you open the workspace. That prompt only offers to *install* them — installed extensions are global to your VS Code, not scoped to this workspace. Per-workspace enable/disable is possible (right-click an extension → "Enable (Workspace)" / "Disable (Workspace)"), but that's a manual local choice stored in your VS Code state, not something this repo can ship or pre-configure.
 
+`.vscode/keybindings.json` binds `alt+s` to `latex-workshop.synctex` (jump between `.tex` source and the built PDF) as a workspace-scoped keybinding, so it applies automatically when this workspace is open, without touching your global keybindings.
+
 If biber breaks, clear its cache by running `rm -rf $(biber --cache)`.
 
 ---
