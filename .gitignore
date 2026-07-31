@@ -1,0 +1,10 @@
+build/
+styles/
+.vale.ini
+*SAVE-ERROR
+report.luabridge.lua
+report.markdown.in
+report.fls
+.DS_Store
+report.synctex(busy)
+.vscode/

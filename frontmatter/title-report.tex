@@ -1,0 +1,61 @@
+\begin{titlepage}
+
+\begin{center}
+
+ \bigskip
+\bigskip
+%% Print the title
+{\makeatletter
+\fontfamily{FiraSans-TLF}\fontseries{b}\fontsize{30}{30}\selectfont\@title
+\makeatother}
+
+%% Print the subtitle
+{\makeatletter
+\ifdefvoid{\@subtitle}{}{\bigskip\titlestyle\fontsize{20}{20}\selectfont\@subtitle}
+\makeatother}
+
+\bigskip
+\bigskip
+
+{\fontsize{20}{20}\selectfont\fontfamily{FiraSans-TLF}\fontseries{r}\selectfont by}
+
+\bigskip
+\bigskip
+
+%% Print the name of the author
+{\makeatletter
+\fontfamily{FiraSans-TLF}\fontseries{b}\fontsize{25}{25}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+%% Print table with names; easily add columns if necessary or remove the table completely
+\setlength\extrarowheight{2pt}
+
+\vfill
+
+%% Print some more information at the bottom
+\begin{tabular}{ll}
+    Author: & TODO \\
+    Company: & TODO \\
+    Company Supervisor: & TODO \\
+    University Supervisor: & TODO \\
+    University Assessor: & TODO \\
+    Internship Duration: & TODO \\
+    Course: & TODO,
+\end{tabular}
+
+\bigskip
+\bigskip
+
+\end{center}
+
+%% Insert a logo at the bottom of the page, if available
+% \begin{tikzpicture}[remember picture, overlay]
+%     \node[above=10mm] at (current page.south) {%
+%         \includegraphics{figures/shared/logo-black}
+%     };
+% \end{tikzpicture}
+
+\end{titlepage}

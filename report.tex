@@ -1,0 +1,81 @@
+\documentclass{tudelft-report}
+
+%% Set up the bibliography
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{report.bib}
+\ExecuteBibliographyOptions{maxcitenames=1}
+
+%% Additional packages and commands
+\usepackage{parskip}
+\setlist{itemsep=-2pt} % Reducing white space in lists slightly
+\renewcommand{\deg}{\si{\degree}\xspace}
+\DeclareSIUnit{\molar}{M}
+
+\usepackage{FiraSans} % Geometric sans for title page
+\usepackage{arydshln}
+\usepackage{pdfpages}
+\usepackage{eso-pic}
+\usepackage{wrapfig}
+
+\usepackage[at]{easylist}
+\NewList(%
+    Hide=1000,Progressive*=1em,Hang=true,
+    Style*=$\bullet$\hskip.6em)
+
+%% ----------------------------------------------------------------------
+%%    Begin of document + Frontmatter (Roman page numbering)
+%% ----------------------------------------------------------------------
+
+\begin{document}
+
+% Full-page cover image
+\includepdf[pages=-]{figures/cover.pdf}
+
+\frontmatter
+\thispagestyle{empty}
+
+%% Define the main parameters
+\title{Report Title}
+\subtitle{Report Subtitle}
+\author{Author Name}
+
+\affiliation{Company/Institute} % Cover only
+\coverimage{figures/cover.pdf} % Aspect ratio of 2:3 (portrait) recommended
+\definecolor{title}{HTML}{17457b} % Color for cover title
+
+\input{frontmatter/title-report}
+\input{frontmatter/summary}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+% \input{frontmatter/nomenclature}
+
+%% ----------------------------------------------------------------------
+%%    Mainmatter (Arabic page numbering)
+%% ----------------------------------------------------------------------
+
+\mainmatter
+\input{mainmatter/c1-introduction.tex}
+\input{mainmatter/c2-chapter-two.tex}
+\input{mainmatter/c3-chapter-three.tex}
+\input{mainmatter/conclusion.tex}
+
+%% Prevent urls running into margins in bibliography
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+
+%% Add bibliography
+\printbibliography[heading=bibintoc,title=References]
+
+%% ----------------------------------------------------------------------
+%%    Appendix (Letters for chapters)
+%% ----------------------------------------------------------------------
+
+\appendix
+\input{appendix/appendix-methods.tex}
+
+% Acknowledgements
+\end{document}

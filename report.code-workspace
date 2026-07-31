@@ -1,0 +1,48 @@
+{
+	"folders": [
+		{
+			"name": "report",
+			"path": "."
+		}
+	],
+	"settings": {
+		// LaTeX Prose Settings -- make .tex editing feel more like a word processor
+		"[latex]": {
+			"editor.fontFamily": "Arial, Helvetica, sans-serif",
+			"editor.fontSize": 16,
+			"editor.lineHeight": 26,
+			"editor.wordWrap": "on",
+			"editor.renderWhitespace": "none",
+			"editor.minimap.enabled": false,
+			"editor.cursorBlinking": "smooth",
+			"editor.wordBasedSuggestions": "off"
+		},
+
+		"workbench.colorCustomizations": {
+			"zenMode.background": "#f5f5f5"
+		},
+
+		"codeium.enableConfig": {
+			"*": true,
+			"latex": false
+		},
+
+		// LaTeX Workshop
+		"latex-workshop.latex.outDir": "%DIR%/build",
+		"latex-workshop.latex.recipe.default": "latexmk",
+		"latex-workshop.view.pdf.viewer": "tab",
+		"latex-workshop.synctex.afterBuild.enabled": true,
+		"latex-workshop.latex.autoBuild.run": "onFileChange",
+		"latex-workshop.intellisense.package.enabled": true,
+
+		// LTeX (LanguageTool grammar/spell check)
+		"ltex.language": "en-GB",
+		"ltex.additionalRules.motherTongue": "en-GB",
+		"ltex.additionalRules.enablePickyRules": true,
+		"ltex.checkFrequency": "save",
+		"ltex.disabledRules": {},
+		"ltex.dictionary": {
+			"en-GB": []
+		}
+	}
+}
