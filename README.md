@@ -9,7 +9,7 @@ Skeleton of a TU Delft-style report with a ready-to-go VS Code workspace, built 
 LaTeX Workshop drives your system's LaTeX tools (`latexmk`, `pdflatex`/`xelatex`/`lualatex`, `biber`) — it does not bundle them, so one of these must be installed first. Full details: [LaTeX Workshop install wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install).
 
 * **macOS** — [MacTeX](https://www.tug.org/mactex/): `brew install --cask mactex-no-gui` (smaller, no GUI apps) or `brew install --cask mactex` (full). Make sure `/Library/TeX/texbin` is on your `PATH` (a new terminal after install usually picks it up automatically).
-* **Windows** — [MiKTeX](https://miktex.org/download) (installs packages on demand) or [TeX Live](https://www.tug.org/texlive/windows.html).
+* **Windows** — [MiKTeX](https://miktex.org/download) (installs packages on demand) or [TeX Live](https://www.tug.org/texlive/windows.html). `latexmk` is a Perl script, and MiKTeX doesn't bundle Perl — install [Strawberry Perl](https://strawberryperl.com/) too and make sure it's on your `PATH`, or `latexmk` will fail to run.
 * **Linux** — TeX Live via your package manager, e.g. `sudo apt install texlive-full` (Debian/Ubuntu) or `sudo pacman -S texlive-most` (Arch). A minimal install may be missing packages this template needs (`biblatex`, `biber`, `parskip`, `FiraSans`, `pdfpages`, `easylist`, …) — prefer the "full"/"most" variant, or install missing packages as errors point to them.
 
 Verify with `latexmk -v` and `biber --version` in a terminal.
