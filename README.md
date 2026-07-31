@@ -28,6 +28,15 @@ Open `report.code-workspace`. It configures:
 
 If biber breaks, clear its cache by running `rm -rf $(biber --cache)`.
 
+### 3. Sync `report.bib` from Zotero
+
+1. Install the [Better BibTeX](https://retorque.re/zotero-better-bibtex/) plugin for Zotero.
+2. In Zotero, create or choose the collection you want exported (e.g. a "Report" collection, or a whole library).
+3. Right-click the collection → **Export Collection** → format **Better BibLaTeX** (not plain BibTeX — this template uses `biblatex`/`biber`).
+4. Check **"Keep updated"** in the export dialog. Zotero will then rewrite the file automatically whenever the collection changes.
+5. Save it as `report.bib` directly in this repo, overwriting the placeholder.
+6. In Better BibTeX preferences, pin a consistent citekey format so keys don't shuffle on every re-export.
+
 ---
 
 # LaTeX x TU Delft - Report/Thesis Template
